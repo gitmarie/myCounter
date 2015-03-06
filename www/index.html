@@ -21,7 +21,7 @@
     <!-- your app's js -->
     <script src="js/app.js"></script>
   </head>
-  <body ng-app="starter">
+  <body ng-app="starter" ng-controller="CountCtrl">
 
     <ion-pane>
       <ion-header-bar class="bar-stable">
@@ -31,11 +31,11 @@
       <ion-content>
 	<div class="list list-inset">
    	  <label class="item item-input">
-     	    <input type="text" placeholder="0">
+     	    <input type="number" ng-model="count" />
 	  </label>
 	</div>
 
-	<button class="button button-block button-positive">
+	<button class="button button-block button-positive" ng-click="count = count + 1" >
 	  Count
 	</button>
 	
